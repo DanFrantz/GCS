@@ -14,6 +14,6 @@ public class app{
         int resultado=primeiroValor+segundoValor;
 
 
-        System.out.println("Resultado"+ resultado);
+        System.out.println("Resultado "+ resultado);
     }
 }
