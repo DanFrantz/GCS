@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class app{
     public static void main(String[] args) {
-        Scanner teclado=new Scanner(System.in)
+        Scanner teclado=new Scanner(System.in);
         System.out.print("Teste usando Git");
         
         
