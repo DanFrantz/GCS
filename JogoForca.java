@@ -1,4 +1,4 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 
 public class JogoForca {
     public static void main (String[] args) {
@@ -30,7 +30,7 @@ public class JogoForca {
 
 
 		// Loop do jogo
-        while (chancesRestantes > 0) {
+        while (chancesRestantes > 0 && letrasEscondidas) {
             System.out.println("\nChances restantes: " + chancesRestantes);
             
             // Mostra letras ja reveladas
@@ -47,16 +47,16 @@ public class JogoForca {
             // Revela letras, se existirem.
             boolean letraEncontrada = false;
             for (int i = 0; i < tamPalavraSorteada; i++) {
-                if (letrasEscondidas[i] == letraDigitada) {
+                if (letrasEscondidas[i]==Character.toUpperCase(letraDigitada)) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
                 }
             }
             
 			// Reduz nro de chances se letra digitada nao existir.
-            
-            chancesRestantes--;
-            
+            if (!letraEncontrada) {
+                chancesRestantes--;
+            }
         }
 
         System.out.println("===========");
